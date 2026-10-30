@@ -1,0 +1,207 @@
+#site {
+    overflow: clip;
+}
+.site_inner {
+    padding: 16px;
+}
+.site_title {
+    position: sticky;
+    top: 100px;
+    left: 0;
+    width: 48%;
+    height: 5vw;
+
+    font-size: 4vw;
+    font-family: var(--mainEng-font);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--black100);
+
+    border-bottom: 0.4vw solid var(--black100);
+}
+.site_wrap {
+}
+.site_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+
+    position: sticky;
+    left: 0;
+}
+.site_item.s1 {
+    background-color: var(--subBg500);
+    background: url(../../img/site03.jpg) center;
+    background-size: cover;
+    top: 180px;
+}
+.site_item.s2 {
+    background-color: var(--subBg400);
+    background: url(../../img/site02.jpg) center;
+    background-size: cover;
+    top: 200px;
+}
+.site_item.s3 {
+    background-color: var(--subBg300);
+    background: url(../../img/site04.jpg) center;
+    background-size: cover;
+    top: 220px;
+}
+.site_item.s4 {
+    z-index: 101;
+    background-color: var(--subBg200);
+    background: url(../../img/site01.jpg) center;
+    background-size: cover;
+    top: 240px;
+}
+
+.site_item .num {
+    position: absolute;
+    left: 1vw;
+    top: 2vw;
+
+    font-size: 5vw;
+    line-height: 1;
+    font-weight: 800;
+    font-family: var(--mainNum-font);
+}
+.site_item .text {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.site_item .text > div {
+    font-size: 3vw;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.site_item .title {
+    font-family: var(--mainKor-font);
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9), 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+.site_item .btn {
+}
+.site_item .btn a {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9), 0 2px 12px rgba(0, 0, 0, 0.6);
+    font-size: 1rem;
+    padding: 0 4px;
+}
+.site_item .btn a:hover,
+.site_item .btn a:focus-visible {
+    color: #e0e0e0;
+}
+
+.site_item .info {
+    width: 98%;
+    position: absolute;
+    bottom: 3%;
+    color: var(--white100);
+    border-top: 1px solid var(--white100);
+    border-bottom: 1px solid var(--white100);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site_item .info span {
+    font-family: var(--mainKor-font);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 801px) {
+    .site_title {
+        width: 100%;
+        height: auto;
+        line-height: 1.1;
+        margin-bottom: 24px;
+        background-color: var(--mainBg-color);
+        z-index: 100;
+    }
+    .site_title::before {
+        content: "";
+        position: absolute;
+        inset: -100px -16px 0;
+        z-index: -1;
+        background-color: var(--mainBg-color);
+        pointer-events: none;
+    }
+    .site_item.s1 {
+        top: calc(132px + 4.8vw);
+    }
+    .site_item.s2 {
+        top: calc(152px + 4.8vw);
+    }
+    .site_item.s3 {
+        top: calc(172px + 4.8vw);
+    }
+    .site_item.s4 {
+        top: calc(192px + 4.8vw);
+    }
+}
+
+@media (max-width: 800px) {
+    .site_title {
+        position: sticky;
+        top: 72px;
+        width: 100%;
+        margin-bottom: 10vw;
+        font-size: 30px;
+        line-height: 1.2;
+        border-bottom-width: 3px;
+        height: auto;
+        background-color: var(--mainBg-color);
+        z-index: 100;
+    }
+    .site_item {
+        position: sticky;
+    }
+    .site_item.s1 {
+        top: 144px;
+    }
+    .site_item.s2 {
+        top: 164px;
+    }
+    .site_item.s3 {
+        top: 184px;
+    }
+    .site_item.s4 {
+        top: 204px;
+    }
+    .site_wrap {
+        padding-bottom: 0;
+    }
+    .site_item .num {
+        font-size: 80px;
+        left: 20px;
+        top: 20px;
+    }
+    .site_item .text > div {
+        font-size: 24px;
+    }
+    .site_item .title {
+        padding: 0 16px;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+    .site_item .info {
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        text-align: left;
+        padding: 5px 0;
+    }
+    .site_item .info span {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}

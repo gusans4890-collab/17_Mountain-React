@@ -1,0 +1,74 @@
+#skill {
+}
+.skill_inner {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.skill_title {
+    position: sticky;
+    top: 100px;
+    left: 0;
+
+    width: 48%;
+    height: auto;
+    align-self: flex-start;
+    padding-bottom: 0;
+    font-size: 4vw;
+    line-height: 0.9;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: var(--mainEng-font);
+    color: var(--black100);
+    border-bottom: 0.4vw solid var(--black100);
+}
+.skill_decs {
+    width: 48%;
+}
+.skill_decs span {
+    display: block;
+    font-size: 5vw;
+    line-height: 1;
+    font-weight: 700;
+    font-family: var(--mainNum-font);
+}
+.skill_decs h3 {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.skill_decs p {
+    font-size: 1.25rem;
+    margin-bottom: 30vh;
+}
+
+@media (max-width: 800px) {
+    .skill_inner {
+        flex-direction: column;
+    }
+    .skill_title {
+        top: 72px;
+        z-index: 10;
+        width: 100%;
+        height: auto;
+        font-size: 30px;
+        line-height: 1.2;
+        border-bottom-width: 3px;
+        margin-bottom: 10vw;
+        background-color: var(--mainBg-color);
+    }
+    .skill_title::before {
+        content: "";
+        position: absolute;
+        inset: -72px -16px 0;
+        z-index: -1;
+        background-color: var(--mainBg-color);
+        pointer-events: none;
+    }
+    .skill_decs {
+        width: 100%;
+    }
+    .skill_decs span {
+        font-size: 20vw;
+    }
+}
